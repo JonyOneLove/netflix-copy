@@ -1,4 +1,4 @@
-import Search from '../ui/Search/Search'
+import Search from '../UI/Search/Search'
 import styles from './Header.module.scss'
 import Profile from './Profile'
 
