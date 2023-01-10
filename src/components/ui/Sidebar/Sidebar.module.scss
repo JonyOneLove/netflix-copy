@@ -1,40 +1,46 @@
 @import '../../../variables';
 
 .sidebar {
-	> button {
-		background-color: transparent;
-		border: none;
-		color: $gray;
-		font-size: 30px;
-	}
+  display: flex;
+  flex-direction: column;
+  // background-color: red;
+  transition: all 0.3s ease 0s;
+  > button {
+    // border: 1px solid blue;
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    color: $gray;
+    font-size: 30px;
+  }
 
-	ul {
-		list-style-type: none;
-		padding: 0;
-		display: none;
-		animation: opacity 0.4s;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: none;
+    animation: opacity 0.4s;
 
-		&.show {
-			display: block;
-		}
+    &.show {
+      display: block;
+    }
 
-		li {
-			margin-bottom: 0.5rem;
-			a {
-				padding: 0.5rem;
-				display: block;
-				color: $gray;
-				text-decoration: none;
-				border-left: 2px solid transparent;
-				font-size: 20px;
-				text-align: right;
+    li {
+      margin-bottom: 0.5rem;
+      a {
+        padding: 0.5rem;
+        display: block;
+        color: $gray;
+        text-decoration: none;
+        border-left: 2px solid transparent;
+        font-size: 20px;
+        text-align: right;
 
-				&:hover,
-				&.active {
-					border-color: $red;
-					background-color: #2a2a2c;
-				}
-			}
-		}
-	}
+        &:hover,
+        &.active {
+          border-color: $red;
+          background-color: #2a2a2c;
+        }
+      }
+    }
+  }
 }

@@ -18,7 +18,7 @@ const Main = () => {
         setIsSidebarShow={setIsSidebarShow}
       />
       <div
-        className={styles.main}
+        className={`${styles.main} ${activeTab === 2 ? styles.main_bg : ''}`}
         style={{
           backgroundImage: `url(${DATA[0].mainImage})`,
           width: isSidebarShow ? '85%' : '90%'
@@ -27,7 +27,7 @@ const Main = () => {
         {activeTab === 1 ? (
           <Information movie={DATA[0]} />
         ) : (
-          activeTab === 2 && <Episodes />
+          activeTab === 2 && <Episodes movie={DATA[0]} />
         )}
       </div>
       <BottomNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
